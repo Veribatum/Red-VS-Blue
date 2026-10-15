@@ -185,6 +185,7 @@ export const episodes=[
           ]
         ],
         "events": [],
+        "player": "TUCKER",
         "dialogueStyle": "adapted"
       }
     ],
@@ -329,6 +330,7 @@ export const episodes=[
           ]
         ],
         "events": [],
+        "player": "TUCKER",
         "dialogueStyle": "adapted"
       }
     ],
@@ -460,6 +462,7 @@ export const episodes=[
           ]
         ],
         "events": [],
+        "player": "CABOOSE",
         "dialogueStyle": "adapted"
       }
     ],
@@ -468,7 +471,7 @@ export const episodes=[
   {
     "id": 4,
     "title": "THE WRONG STORE",
-    "player": "DONUT",
+    "player": "CABOOSE",
     "roster": [
       "SARGE",
       "GRIF",
@@ -482,7 +485,7 @@ export const episodes=[
     "tank": false,
     "pink": false,
     "spawn": {
-      "x": 746,
+      "x": 2436,
       "y": 540
     },
     "report": "Original episode 4: Donut mistakes blue base for the store and leaves with its flag.",
@@ -563,6 +566,11 @@ export const episodes=[
             "Donut is looking for the imaginary supplies Grif requested. He mistakes Blue Base for a shop."
           ]
         ],
+        "player": "DONUT",
+        "start": {
+          "x": 850,
+          "y": 540
+        },
         "dialogueStyle": "adapted"
       },
       {

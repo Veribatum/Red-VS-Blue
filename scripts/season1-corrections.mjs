@@ -1,6 +1,8 @@
 // Condensed, newly worded dialogue about the original scenes. Not episode transcripts.
 // Episode-specific references and the limits of this adaptation are in docs/STORY-COVERAGE.md.
 export function correctSeasonOne(episodes){
+ episodes[0].stages[1].player='TUCKER';episodes[1].stages[2].player='TUCKER';episodes[2].stages[1].player='CABOOSE';
+ episodes[3].player='CABOOSE';episodes[3].spawn={x:2436,y:540};episodes[3].stages[1].player='DONUT';episodes[3].stages[1].start={x:850,y:540};
  const replace=(ep,stage,lines)=>{episodes[ep-1].stages[stage].dialogue=lines;};
  replace(1,0,[['SIMMONS','You ever wonder why we’re here?'],['GRIF','You mean whether life is an accident, or whether God has some sort of plan? I have spent nights thinking about that.'],['SIMMONS','I meant our assignment. Why put us in this canyon?'],['GRIF','Right. The canyon. Forget the other thing.'],['SIMMONS','We guard this base because the Blues have a base. They guard theirs because we have ours.'],['GRIF','So if we win, all we get is an empty canyon.']]);
  replace(1,1,[['TUCKER','What are those two Reds doing now?'],['CHURCH','Still talking. You keep asking me the same question.'],['TUCKER','You have the sniper scope. I cannot see what you can see.'],['CHURCH','Then stop asking for a new report every few seconds.'],['SARGE','Grif! Simmons! Get down here in front of the base.']]);

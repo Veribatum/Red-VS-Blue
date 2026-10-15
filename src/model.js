@@ -22,10 +22,10 @@ export class Game {
   const s=this.stage();this.elapsed=0;this.hold=0;this.progress=0;this.pathIndex=0;this.eventsDone=new Set();this.dialogue=null;this.shots=[];this.hazards=[];this.projectiles=[];this.mounted=null;this.interactCooldown=0;this.player.health=Math.max(75,this.player.health);this.player.shield=100;this.player.ammo=24;
   for(const a of Object.values(this.npcs)){a.pinned=false;a.suppress=70;a.pose=a.restrained?'restrained':'idle';a.goal=a.x;}
   this.items=(s.items||[]).map(p=>({...p,done:false}));
-  if(s.player)this.switchPlayer(s.player);
+  if(s.player&&s.player!==this.player.id){const actor=this.npcs[s.player];this.switchPlayer(s.player);if(actor){this.player.x=actor.x;this.player.y=actor.y;this.player.vy=0;}}
   if(s.kind==='scene')for(const [n,a]of Object.values(this.npcs).entries())if(!s.cast.some(c=>c.id===a.id)&&Math.abs(a.x-s.point.x)<300&&!a.restrained)a.goal=s.point.x+350+n*90;
   if(s.cast)for(const c of s.cast){const a=this.npcs[c.id];if(a){a.goal=c.x;a.pose=a.restrained?'restrained':c.pose;}}
-  if(['follow','escape'].includes(s.kind)){const a=this.npcs[s.who];if(s.start)a.x=s.start.x;a.goal=s.path[0].x;}
+  if(['follow','escape'].includes(s.kind)){const a=this.npcs[s.who];if(s.start){a.x=s.start.x;if(a.id===this.player.id){this.player.x=a.x;this.player.y=FLOOR;}}a.goal=s.path[0].x;}
   if(s.kind==='revive'){this.npcs.SARGE.alive=false;this.npcs.SARGE.ghost=false;this.npcs.SARGE.pose='down';this.npcs.SARGE.x=s.point.x;this.npcs.GRIF.goal=s.point.x+50;}
   if(s.kind==='work'){this.npcs[s.who].goal=s.point.x+35;this.npcs[s.who].pose='work';}
   if(s.kind==='tankPractice'){this.switchPlayer('CABOOSE');this.mounted='tank';this.player.x=this.tank.x;this.targets=[{x:1480,y:400,hp:1},{x:1710,y:400,hp:1},{x:1900,y:400,hp:1}];this.tank.mounted=true;this.aim={x:-1,y:0};this.player.face=-1;}

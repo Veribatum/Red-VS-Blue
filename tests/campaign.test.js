@@ -57,6 +57,7 @@ test('Opening story follows the conversation subjects and corrected introduction
  assert(episodes[2].stages[0].dialogue.some(([,line])=>line.includes('headlight fluid')));
  assert(episodes[3].stages[0].dialogue.some(([,line])=>line.includes('guard our flag')));
  assert(episodes[3].stages[2].dialogue.some(([,line])=>line.includes('General')));
+ const g=new Game();g.start(3);assert.equal(g.player.id,'CABOOSE');g.player.x=g.stage().point.x;g.interact();while(g.dialogue){g.interactCooldown=0;g.interact();}assert.equal(g.player.id,'DONUT');assert(g.player.x<1100,'Donut starts his errand at Red Base after the Blue viewpoint');
  assert.equal(episodes[9].stages[0].dialogue[0][0],'TUCKER');
  assert(episodes[18].stages.at(-1).dialogue.some(([who,line])=>who==='CABOOSE'&&line.includes('O’Malley')));
 });
