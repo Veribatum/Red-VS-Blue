@@ -1,4 +1,4 @@
-import {characters} from './campaign.js';import {FLOOR,WORLD} from './model.js';
+import {characters} from './campaign.js?v=s1-touch-02';import {FLOOR,WORLD} from './model.js?v=s1-touch-02';
 const assets={};export async function loadAssets(load=async url=>{const im=new Image();im.src=url.href;await im.decode();return im;}){await Promise.all([...Object.keys(characters).filter(id=>characters[id].x!==undefined).map(id=>id.toLowerCase()),'donut_pink','canyon','vehicles'].map(async name=>{assets[name]=await load(new URL('../assets/'+name+'.svg',import.meta.url));}));return assets;}
 const color=id=>characters[id]?.color||'#b4c5d3';
 export class Renderer{

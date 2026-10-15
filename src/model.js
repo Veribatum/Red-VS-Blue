@@ -1,4 +1,4 @@
-import {episodes,characters} from './campaign.js';
+import {episodes,characters} from './campaign.js?v=s1-touch-02';
 export const FLOOR=540,WORLD=3200;
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v)),dist=(a,b)=>Math.hypot(a.x-b.x,a.y-b.y);
 export class Game {
@@ -11,6 +11,7 @@ export class Game {
   this.player={id:this.chapter.player,...this.chapter.spawn,vx:0,vy:0,face:1,health:100,shield:100,grounded:true,hurt:0,shoot:0,throw:0,ammo:24,reload:0,crouch:false,ghost:this.chapter.player==='CHURCH'&&!!this.chapter.ghost,pink:this.chapter.pink};
   this.car={x:740,y:FLOOR,v:0};this.tank={x:2228,y:FLOOR,disabled:false,broken:this.episode>=8,mounted:false};this.mounted=null;
   this.platforms=[{x:0,y:FLOOR,w:WORLD,h:180},{x:400,y:418,w:260,h:18},{x:2580,y:418,w:260,h:18},{x:1120,y:490,w:110,h:50},{x:1640,y:474,w:100,h:66},{x:1950,y:495,w:85,h:45}];
+  if(index===14&&this.npcs.SARGE)this.npcs.SARGE.ghost=true;
   if(this.chapter.dead)this.event('churchKilled',true);if(this.chapter.captured)this.event('texCaptured',true);
   if([7,8].includes(index)&&this.npcs.CABOOSE)this.npcs.CABOOSE.onTank=true;
   for(const s of this.chapter.stages.slice(0,this.stageIndex)){for(const e of s.events||[])this.event(e[1],true);if(s.kind==='possess')this.event('possessSarge',true);if(s.kind==='revive')this.event('reviveSarge',true);if(s.kind==='collect'&&s.items.some(i=>/FLAG/.test(i.type)))this.story.flag=true;}
@@ -25,7 +26,7 @@ export class Game {
   if(s.kind==='scene')for(const [n,a]of Object.values(this.npcs).entries())if(!s.cast.some(c=>c.id===a.id)&&Math.abs(a.x-s.point.x)<300&&!a.restrained)a.goal=s.point.x+350+n*90;
   if(s.cast)for(const c of s.cast){const a=this.npcs[c.id];if(a){a.goal=c.x;a.pose=a.restrained?'restrained':c.pose;}}
   if(['follow','escape'].includes(s.kind)){const a=this.npcs[s.who];if(s.start)a.x=s.start.x;a.goal=s.path[0].x;}
-  if(s.kind==='revive'){this.npcs.SARGE.alive=false;this.npcs.SARGE.pose='down';this.npcs.SARGE.x=s.point.x;this.npcs.GRIF.goal=s.point.x+50;}
+  if(s.kind==='revive'){this.npcs.SARGE.alive=false;this.npcs.SARGE.ghost=false;this.npcs.SARGE.pose='down';this.npcs.SARGE.x=s.point.x;this.npcs.GRIF.goal=s.point.x+50;}
   if(s.kind==='work'){this.npcs[s.who].goal=s.point.x+35;this.npcs[s.who].pose='work';}
   if(s.kind==='tankPractice'){this.switchPlayer('CABOOSE');this.mounted='tank';this.player.x=this.tank.x;this.targets=[{x:1480,y:400,hp:1},{x:1710,y:400,hp:1},{x:1900,y:400,hp:1}];this.tank.mounted=true;this.aim={x:-1,y:0};this.player.face=-1;}
   if(s.kind==='suppress')for(const id of s.targets)this.npcs[id].goal=s.point.x+330+(id==='TUCKER'?90:0);
@@ -90,7 +91,7 @@ export class Game {
    case 'possessSarge':a.CHURCH.visible=false;a.SARGE.possessed=true;break;
    case 'releaseTex':a.TEX.restrained=false;a.TEX.pose='run';a.TEX.goal=1500;break;
    case 'sargeShot':a.SARGE.alive=false;a.SARGE.pose='down';a.SARGE.possessed=false;a.CHURCH.visible=true;a.CHURCH.ghost=true;a.CHURCH.x=a.SARGE.x+90;if(this.player.id==='SARGE')this.switchPlayer('CHURCH');break;
-   case 'reviveSarge':a.SARGE.alive=true;a.SARGE.pose='idle';break;
+   case 'reviveSarge':a.SARGE.alive=true;a.SARGE.ghost=false;a.SARGE.pose='idle';break;
    case 'voiceCardSpark':a.LOPEZ.speaksSpanish=true;break;
    case 'repairSheila':this.tank.broken=false;break;
    case 'possessLopez':a.CHURCH.visible=false;a.LOPEZ.possessed=true;break;

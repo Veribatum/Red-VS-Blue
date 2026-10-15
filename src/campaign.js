@@ -115,22 +115,31 @@ export const episodes=[
         "dialogue": [
           [
             "SIMMONS",
-            "Two bases, two teams, one canyon. There must be a strategic purpose."
+            "You ever wonder why we’re here?"
           ],
           [
             "GRIF",
-            "The canyon has a purpose. It keeps us far away from things that matter."
+            "You mean whether life is an accident, or whether God has some sort of plan? I have spent nights thinking about that."
           ],
           [
             "SIMMONS",
-            "You could take the assignment seriously."
+            "I meant our assignment. Why put us in this canyon?"
           ],
           [
             "GRIF",
-            "I am taking my confusion very seriously."
+            "Right. The canyon. Forget the other thing."
+          ],
+          [
+            "SIMMONS",
+            "We guard this base because the Blues have a base. They guard theirs because we have ours."
+          ],
+          [
+            "GRIF",
+            "So if we win, all we get is an empty canyon."
           ]
         ],
-        "events": []
+        "events": [],
+        "dialogueStyle": "adapted"
       },
       {
         "kind": "scene",
@@ -156,24 +165,30 @@ export const episodes=[
         "dialogue": [
           [
             "TUCKER",
-            "The Reds are talking again."
+            "What are those two Reds doing now?"
           ],
           [
             "CHURCH",
-            "That is their most successful operation so far."
+            "Still talking. You keep asking me the same question."
           ],
           [
             "TUCKER",
-            "What do you think they are planning?"
+            "You have the sniper scope. I cannot see what you can see."
           ],
           [
             "CHURCH",
-            "Probably how to turn standing around into a promotion."
+            "Then stop asking for a new report every few seconds."
+          ],
+          [
+            "SARGE",
+            "Grif! Simmons! Get down here in front of the base."
           ]
         ],
-        "events": []
+        "events": [],
+        "dialogueStyle": "adapted"
       }
-    ]
+    ],
+    "dialogueStyle": "adapted"
   },
   {
     "id": 2,
@@ -184,7 +199,8 @@ export const episodes=[
       "GRIF",
       "SIMMONS",
       "CHURCH",
-      "TUCKER"
+      "TUCKER",
+      "LOPEZ"
     ],
     "tank": false,
     "pink": false,
@@ -219,27 +235,34 @@ export const episodes=[
             "x": 982,
             "y": 540,
             "pose": "argue"
+          },
+          {
+            "id": "LOPEZ",
+            "x": 1104,
+            "y": 540,
+            "pose": "work"
           }
         ],
         "dialogue": [
           [
             "SARGE",
-            "Command sent us a Warthog. Finally, a way to bring superior firepower to our lack of purpose."
+            "Lopez and I have a new reconnaissance vehicle to show you. Command calls it a Warthog."
           ],
           [
             "GRIF",
-            "I would have called it a puma."
+            "Those hooks look more like a big cat to me. I would call it a puma."
+          ],
+          [
+            "SARGE",
+            "We are keeping the name Warthog. Command is also sending us a new recruit."
           ],
           [
             "SIMMONS",
-            "The name is on the paperwork."
-          ],
-          [
-            "GRIF",
-            "That does not make the paperwork a zoologist."
+            "The recruit will need to learn the chain of command."
           ]
         ],
-        "events": []
+        "events": [],
+        "dialogueStyle": "adapted"
       },
       {
         "kind": "drive",
@@ -260,10 +283,11 @@ export const episodes=[
         ],
         "dialogue": [
           [
-            "SARGE",
-            "Grif, drive. Simmons, supervise. Everyone else, be impressed."
+            "NARRATOR",
+            "Driving practice is a gameplay addition. In the episode, the argument over the vehicle continues."
           ]
-        ]
+        ],
+        "dialogueStyle": "adapted"
       },
       {
         "kind": "scene",
@@ -289,16 +313,26 @@ export const episodes=[
         "dialogue": [
           [
             "TUCKER",
-            "They got a vehicle."
+            "The Reds have a new vehicle. What is it supposed to look like?"
           ],
           [
             "CHURCH",
-            "We got another day in the canyon. Great exchange rate."
+            "Some kind of cat. I cannot think of the name."
+          ],
+          [
+            "TUCKER",
+            "You mean a puma?"
+          ],
+          [
+            "CHURCH",
+            "That is the one."
           ]
         ],
-        "events": []
+        "events": [],
+        "dialogueStyle": "adapted"
       }
-    ]
+    ],
+    "dialogueStyle": "adapted"
   },
   {
     "id": 3,
@@ -311,9 +345,10 @@ export const episodes=[
       "CHURCH",
       "TUCKER",
       "DONUT",
-      "CABOOSE"
+      "CABOOSE",
+      "LOPEZ"
     ],
-    "tank": false,
+    "tank": true,
     "pink": false,
     "spawn": {
       "x": 746,
@@ -357,22 +392,27 @@ export const episodes=[
         "dialogue": [
           [
             "DONUT",
-            "Reporting for duty! Where do I put my things?"
+            "Private Donut reporting. I just arrived from basic training."
           ],
           [
             "GRIF",
-            "Anywhere that makes you harder to assign work to."
+            "I am Grif. The maroon one is Simmons."
           ],
           [
             "SIMMONS",
-            "Do not treat that as official advice."
+            "Remember that Sarge is in charge here."
           ],
           [
             "GRIF",
-            "It has been field-tested."
+            "First assignment: find some elbow grease and headlight fluid. Try the store farther down the canyon."
+          ],
+          [
+            "DONUT",
+            "Understood. I will go get the supplies."
           ]
         ],
-        "events": []
+        "events": [],
+        "dialogueStyle": "adapted"
       },
       {
         "kind": "scene",
@@ -404,24 +444,26 @@ export const episodes=[
         "dialogue": [
           [
             "CABOOSE",
-            "I am ready to help!"
+            "I am the new Blue recruit. Is this where I report?"
           ],
           [
             "CHURCH",
-            "That is exactly what worries me."
+            "Yes. And Command delivered a tank with you."
           ],
           [
             "TUCKER",
-            "Start with not touching anything important."
+            "We finally get a tank and nobody here knows how to operate it."
           ],
           [
-            "CABOOSE",
-            "I can touch unimportant things very carefully."
+            "CHURCH",
+            "Apparently sending the equipment and training someone to use it are separate ideas."
           ]
         ],
-        "events": []
+        "events": [],
+        "dialogueStyle": "adapted"
       }
-    ]
+    ],
+    "dialogueStyle": "adapted"
   },
   {
     "id": 4,
@@ -434,7 +476,8 @@ export const episodes=[
       "CHURCH",
       "TUCKER",
       "DONUT",
-      "CABOOSE"
+      "CABOOSE",
+      "LOPEZ"
     ],
     "tank": false,
     "pink": false,
@@ -446,50 +489,55 @@ export const episodes=[
     "stages": [
       {
         "kind": "scene",
-        "title": "Hear the errand Grif gives Donut",
+        "title": "Hear Church assign the rookie to guard the flag",
         "point": {
-          "x": 786,
+          "x": 2436,
           "y": 540
         },
         "cast": [
           {
-            "id": "GRIF",
-            "x": 686,
+            "id": "CHURCH",
+            "x": 2336,
             "y": 540,
             "pose": "argue"
           },
           {
-            "id": "SIMMONS",
-            "x": 786,
+            "id": "TUCKER",
+            "x": 2436,
             "y": 540,
             "pose": "argue"
           },
           {
-            "id": "DONUT",
-            "x": 886,
+            "id": "CABOOSE",
+            "x": 2536,
             "y": 540,
             "pose": "wave"
           }
         ],
         "dialogue": [
           [
-            "GRIF",
-            "We need some supplies. The store is down the canyon."
+            "CHURCH",
+            "I have a girlfriend back home."
           ],
           [
-            "SIMMONS",
-            "This is going to become paperwork."
+            "TUCKER",
+            "A girlfriend? You never mentioned that."
           ],
           [
-            "DONUT",
-            "Great! I will be back before anyone misses me."
+            "CABOOSE",
+            "Is she the cow you were talking about?"
           ],
           [
-            "GRIF",
-            "Take your time. We are very resilient."
+            "CHURCH",
+            "Go inside and guard our flag. A General will be coming for an inspection."
+          ],
+          [
+            "TUCKER",
+            "Stay with the flag until the General arrives."
           ]
         ],
-        "events": []
+        "events": [],
+        "dialogueStyle": "adapted"
       },
       {
         "kind": "follow",
@@ -509,7 +557,13 @@ export const episodes=[
             "y": 540
           }
         ],
-        "dialogue": []
+        "dialogue": [
+          [
+            "NARRATOR",
+            "Donut is looking for the imaginary supplies Grif requested. He mistakes Blue Base for a shop."
+          ]
+        ],
+        "dialogueStyle": "adapted"
       },
       {
         "kind": "scene",
@@ -535,22 +589,27 @@ export const episodes=[
         "dialogue": [
           [
             "DONUT",
-            "Is this the supply counter?"
+            "I am looking for headlight fluid and elbow grease. Is this the store?"
           ],
           [
             "CABOOSE",
-            "Church told me to guard the flag. It is the most important thing here."
+            "Are you the General? I was told to expect an inspection."
           ],
           [
             "DONUT",
-            "Then that looks like the item I need."
+            "I am just a private. What have you got in stock?"
           ],
           [
             "CABOOSE",
-            "You seem very sure. That is more sure than my instructions."
+            "There is only the flag."
+          ],
+          [
+            "DONUT",
+            "Then I will take that. I do not want to return with nothing."
           ]
         ],
-        "events": []
+        "events": [],
+        "dialogueStyle": "adapted"
       },
       {
         "kind": "collect",
@@ -561,9 +620,17 @@ export const episodes=[
             "x": 2488,
             "y": 540
           }
-        ]
+        ],
+        "dialogue": [
+          [
+            "NARRATOR",
+            "Caboose lets Donut take the flag because he thinks the visitor is the General."
+          ]
+        ],
+        "dialogueStyle": "adapted"
       }
-    ]
+    ],
+    "dialogueStyle": "adapted"
   },
   {
     "id": 5,
@@ -576,7 +643,8 @@ export const episodes=[
       "CHURCH",
       "TUCKER",
       "DONUT",
-      "CABOOSE"
+      "CABOOSE",
+      "LOPEZ"
     ],
     "tank": false,
     "pink": false,
@@ -615,19 +683,24 @@ export const episodes=[
         ],
         "dialogue": [
           [
+            "CABOOSE",
+            "The General came by and took the flag."
+          ],
+          [
             "CHURCH",
-            "Our flag is walking away with a Red!"
+            "That was a Red! You let him walk off with our flag?"
           ],
           [
             "TUCKER",
-            "You might want to give Caboose more specific instructions."
+            "He is still out in the canyon. We can catch him."
           ],
           [
-            "CHURCH",
-            "That would require instructions for interpreting the instructions."
+            "SIMMONS",
+            "Grif, the Blues are shooting at our new recruit. Get the Warthog."
           ]
         ],
-        "events": []
+        "events": [],
+        "dialogueStyle": "adapted"
       },
       {
         "kind": "escape",
@@ -654,11 +727,13 @@ export const episodes=[
         "dialogue": [
           [
             "DONUT",
-            "I think the store has a very aggressive returns policy."
+            "I do not know why they are firing at me. I was only trying to get the supplies."
           ]
-        ]
+        ],
+        "dialogueStyle": "adapted"
       }
-    ]
+    ],
+    "dialogueStyle": "adapted"
   },
   {
     "id": 6,
@@ -671,7 +746,8 @@ export const episodes=[
       "CHURCH",
       "TUCKER",
       "DONUT",
-      "CABOOSE"
+      "CABOOSE",
+      "LOPEZ"
     ],
     "tank": false,
     "pink": false,
@@ -711,15 +787,19 @@ export const episodes=[
         "dialogue": [
           [
             "CHURCH",
-            "Give us the flag."
+            "Stop! Give our flag back."
           ],
           [
             "DONUT",
-            "Should I get a receipt first?"
+            "I am not a General. I am a private."
           ],
           [
             "TUCKER",
-            "The Reds brought their new vehicle. This discussion is about to get loud."
+            "What if the teleporter sent us into the past? Maybe this is Sarge before he became a sergeant."
+          ],
+          [
+            "CHURCH",
+            "The teleporter did not turn the enemy into a time-travel problem."
           ]
         ],
         "events": [
@@ -727,7 +807,8 @@ export const episodes=[
             1,
             "teleportBlues"
           ]
-        ]
+        ],
+        "dialogueStyle": "adapted"
       },
       {
         "kind": "suppress",
@@ -743,13 +824,14 @@ export const episodes=[
         "dialogue": [
           [
             "SIMMONS",
-            "Keep them behind cover! We are rescuing our rookie."
+            "The Blues are behind that rock. Keep the chaingun on their position."
           ],
           [
             "GRIF",
-            "I was hoping the store had a delivery option."
+            "I am driving. You handle the gun."
           ]
-        ]
+        ],
+        "dialogueStyle": "adapted"
       },
       {
         "kind": "scene",
@@ -787,20 +869,22 @@ export const episodes=[
         "dialogue": [
           [
             "DONUT",
-            "I brought the supplies!"
+            "I found a flag instead of the supplies."
           ],
           [
-            "SARGE",
-            "That is the enemy flag."
+            "SIMMONS",
+            "That belongs to the Blue Team."
           ],
           [
             "GRIF",
-            "Best shopping trip anyone here has ever taken."
+            "The rookie accidentally completed a real mission."
           ]
         ],
-        "events": []
+        "events": [],
+        "dialogueStyle": "adapted"
       }
-    ]
+    ],
+    "dialogueStyle": "adapted"
   },
   {
     "id": 7,
@@ -813,7 +897,8 @@ export const episodes=[
       "CHURCH",
       "TUCKER",
       "DONUT",
-      "CABOOSE"
+      "CABOOSE",
+      "LOPEZ"
     ],
     "tank": true,
     "pink": false,
@@ -847,18 +932,19 @@ export const episodes=[
         "dialogue": [
           [
             "CHURCH",
-            "We are losing a fight we were not even interested in."
+            "Their chaingun has us pinned."
           ],
           [
             "TUCKER",
-            "Caboose is heading for the tank."
+            "Caboose is heading for our tank."
           ],
           [
             "CHURCH",
-            "That sentence should come with a siren."
+            "He has not been trained to drive it."
           ]
         ],
-        "events": []
+        "events": [],
+        "dialogueStyle": "adapted"
       },
       {
         "kind": "scene",
@@ -884,19 +970,19 @@ export const episodes=[
         "dialogue": [
           [
             "SHEILA",
-            "Welcome to the vehicle training system."
+            "Vehicle training is beginning. Follow the operating instructions."
           ],
           [
             "CABOOSE",
-            "I would like to rescue my friends."
+            "There are six pedals, but only four directions to drive. I do not understand the extra pedals."
           ],
           [
             "SHEILA",
-            "Please begin with the safety instructions."
+            "The tutorial will explain the controls."
           ],
           [
-            "CABOOSE",
-            "I am very safe when nobody is in front of me."
+            "GRIF",
+            "Simmons, leave the Warthog here. We can try to get around them on foot."
           ]
         ],
         "events": [
@@ -904,7 +990,8 @@ export const episodes=[
             2,
             "mountCaboose"
           ]
-        ]
+        ],
+        "dialogueStyle": "adapted"
       },
       {
         "kind": "tankPractice",
@@ -915,12 +1002,14 @@ export const episodes=[
         },
         "dialogue": [
           [
-            "SHEILA",
-            "Aim at the metal targets. Keep your friends out of the firing lane."
+            "NARRATOR",
+            "This target drill teaches the game controls. It is an added activity, not a scene from the episode."
           ]
-        ]
+        ],
+        "dialogueStyle": "adapted"
       }
-    ]
+    ],
+    "dialogueStyle": "adapted"
   },
   {
     "id": 8,
@@ -933,7 +1022,8 @@ export const episodes=[
       "CHURCH",
       "TUCKER",
       "DONUT",
-      "CABOOSE"
+      "CABOOSE",
+      "LOPEZ"
     ],
     "tank": true,
     "pink": false,
@@ -956,13 +1046,14 @@ export const episodes=[
         "dialogue": [
           [
             "GRIF",
-            "The tank is moving! That is my signal to stop being here."
+            "The tank is right behind us! Get away from the Warthog!"
           ],
           [
             "SIMMONS",
-            "Move back toward the base!"
+            "Keep running!"
           ]
-        ]
+        ],
+        "dialogueStyle": "adapted"
       },
       {
         "kind": "scene",
@@ -994,19 +1085,19 @@ export const episodes=[
         "dialogue": [
           [
             "CHURCH",
-            "Caboose, watch where you point that thing!"
+            "Caboose, the tank is firing automatically. Turn that mode off!"
           ],
           [
-            "CABOOSE",
-            "I am helping very hard."
+            "SHEILA",
+            "Automatic targeting remains active."
           ],
           [
             "TUCKER",
-            "Church!"
+            "The shot hit Church!"
           ],
           [
             "CABOOSE",
-            "Was that the wrong helping?"
+            "I was trying to save him."
           ]
         ],
         "events": [
@@ -1014,9 +1105,11 @@ export const episodes=[
             3,
             "churchKilled"
           ]
-        ]
+        ],
+        "dialogueStyle": "adapted"
       }
-    ]
+    ],
+    "dialogueStyle": "adapted"
   },
   {
     "id": 9,
@@ -1029,7 +1122,8 @@ export const episodes=[
       "CHURCH",
       "TUCKER",
       "DONUT",
-      "CABOOSE"
+      "CABOOSE",
+      "LOPEZ"
     ],
     "dead": true,
     "tank": true,
@@ -1053,14 +1147,19 @@ export const episodes=[
         ],
         "dialogue": [
           [
-            "SIMMONS",
-            "Hold on until Sarge gets here!"
+            "SARGE",
+            "This is Sarge. What is happening down there?"
           ],
           [
-            "GRIF",
-            "Can we hold on somewhere less visible?"
+            "SIMMONS",
+            "The Blues have brought their tank into the fight."
+          ],
+          [
+            "SARGE",
+            "I am bringing air support. Stay clear of it."
           ]
-        ]
+        ],
+        "dialogueStyle": "adapted"
       },
       {
         "kind": "scene",
@@ -1098,15 +1197,15 @@ export const episodes=[
         "dialogue": [
           [
             "SARGE",
-            "Support has arrived!"
+            "Air support has hit the tank."
           ],
           [
             "CABOOSE",
-            "Sheila? I think the leaving part is broken."
+            "Sheila is not moving, and I cannot get out."
           ],
           [
             "GRIF",
-            "Good. Let the tank handle the rookie orientation."
+            "At least the tank has stopped chasing us."
           ]
         ],
         "events": [
@@ -1114,9 +1213,11 @@ export const episodes=[
             2,
             "airstrike"
           ]
-        ]
+        ],
+        "dialogueStyle": "adapted"
       }
-    ]
+    ],
+    "dialogueStyle": "adapted"
   },
   {
     "id": 10,
@@ -1130,7 +1231,8 @@ export const episodes=[
       "TUCKER",
       "DONUT",
       "CABOOSE",
-      "TEX"
+      "TEX",
+      "LOPEZ"
     ],
     "ghost": true,
     "tank": true,
@@ -1141,47 +1243,6 @@ export const episodes=[
     },
     "report": "Original episode 10: Church returns as a ghost and Tex arrives.",
     "stages": [
-      {
-        "kind": "scene",
-        "title": "Meet Church’s apparent ghost",
-        "point": {
-          "x": 2436,
-          "y": 540
-        },
-        "cast": [
-          {
-            "id": "CHURCH",
-            "x": 2386,
-            "y": 540,
-            "pose": "argue"
-          },
-          {
-            "id": "TUCKER",
-            "x": 2486,
-            "y": 540,
-            "pose": "argue"
-          }
-        ],
-        "dialogue": [
-          [
-            "TUCKER",
-            "Church? You are supposed to be dead."
-          ],
-          [
-            "CHURCH",
-            "I noticed. Apparently even dying does not get me transferred."
-          ],
-          [
-            "CABOOSE",
-            "I knew my friend would come back."
-          ],
-          [
-            "CHURCH",
-            "You are doing a terrible job of keeping him here."
-          ]
-        ],
-        "events": []
-      },
       {
         "kind": "scene",
         "title": "Help Tucker contact Vic for reinforcements",
@@ -1206,22 +1267,103 @@ export const episodes=[
         "dialogue": [
           [
             "TUCKER",
-            "Command? We lost Church and now the tank has locked our rookie inside."
+            "Command, Church is dead. We need reinforcements."
           ],
           [
             "VIC",
-            "I am putting this down as a personnel and parking issue."
+            "Your reinforcement will be a freelancer called Tex."
           ],
           [
             "TUCKER",
-            "Send somebody who can win a fight."
-          ],
-          [
-            "VIC",
-            "A freelancer is on the way. Please stop creating categories for this form."
+            "A mercenary? All right. Send the freelancer."
           ]
         ],
-        "events": []
+        "events": [],
+        "dialogueStyle": "adapted"
+      },
+      {
+        "kind": "scene",
+        "title": "Meet Church’s apparent ghost",
+        "point": {
+          "x": 2436,
+          "y": 540
+        },
+        "cast": [
+          {
+            "id": "CHURCH",
+            "x": 2386,
+            "y": 540,
+            "pose": "argue"
+          },
+          {
+            "id": "TUCKER",
+            "x": 2486,
+            "y": 540,
+            "pose": "argue"
+          }
+        ],
+        "dialogue": [
+          [
+            "TUCKER",
+            "Church? You were killed by the tank."
+          ],
+          [
+            "CHURCH",
+            "I know. I seem to have come back without my body."
+          ],
+          [
+            "CABOOSE",
+            "I did not mean to shoot you."
+          ],
+          [
+            "CHURCH",
+            "We will discuss that after the other problem."
+          ]
+        ],
+        "events": [],
+        "dialogueStyle": "adapted"
+      },
+      {
+        "kind": "scene",
+        "title": "Hear Church’s warning about Tex",
+        "point": {
+          "x": 2436,
+          "y": 540
+        },
+        "cast": [
+          {
+            "id": "CHURCH",
+            "x": 2386,
+            "y": 540,
+            "pose": "argue"
+          },
+          {
+            "id": "TUCKER",
+            "x": 2486,
+            "y": 540,
+            "pose": "argue"
+          }
+        ],
+        "dialogue": [
+          [
+            "CHURCH",
+            "Do not trust Tex just because Command sent a reinforcement."
+          ],
+          [
+            "TUCKER",
+            "Why?"
+          ],
+          [
+            "CHURCH",
+            "I fought alongside Tex at Sidewinder. My squad was wiped out."
+          ],
+          [
+            "TUCKER",
+            "And nobody thought to mention that before I called Command?"
+          ]
+        ],
+        "events": [],
+        "dialogueStyle": "adapted"
       },
       {
         "kind": "scene",
@@ -1258,62 +1400,23 @@ export const episodes=[
         ],
         "dialogue": [
           [
-            "TUCKER",
-            "Command sent a freelancer."
-          ],
-          [
             "TEX",
-            "Where is the problem?"
-          ],
-          [
-            "CHURCH",
-            "It is roughly the entire canyon."
-          ],
-          [
-            "TEX",
-            "Then stand clear."
-          ]
-        ],
-        "events": []
-      },
-      {
-        "kind": "scene",
-        "title": "Hear Church’s warning about Tex",
-        "point": {
-          "x": 2436,
-          "y": 540
-        },
-        "cast": [
-          {
-            "id": "CHURCH",
-            "x": 2386,
-            "y": 540,
-            "pose": "argue"
-          },
-          {
-            "id": "TUCKER",
-            "x": 2486,
-            "y": 540,
-            "pose": "argue"
-          }
-        ],
-        "dialogue": [
-          [
-            "CHURCH",
-            "I saw Tex fight at Sidewinder. Other Blue soldiers did not get a second chance."
+            "I am the freelancer Command sent. Where are the Reds?"
           ],
           [
             "TUCKER",
-            "And that is the person we requested?"
+            "Their base is across the canyon."
           ],
           [
             "CHURCH",
-            "Keep the freelancer away from Caboose. The tank already has enough problems."
+            "Tucker, keep the rookie out of the way."
           ]
         ],
-        "events": []
+        "events": [],
+        "dialogueStyle": "adapted"
       }
-    ]
+    ],
+    "dialogueStyle": "adapted"
   },
   {
     "id": 11,
@@ -1375,22 +1478,23 @@ export const episodes=[
         "dialogue": [
           [
             "SARGE",
-            "Grif, why is our vehicle broken?"
+            "Grif, explain what happened to our Warthog."
           ],
           [
             "GRIF",
-            "Because we took it to a war."
+            "The tank shot it while Simmons and I were getting away."
           ],
           [
             "SIMMONS",
-            "Lopez is repairing it."
+            "Lopez is repairing the damage."
           ],
           [
-            "GRIF",
-            "Send him the blame too. He looks like he can carry it."
+            "SARGE",
+            "Then let Lopez work. We still have an enemy base to deal with."
           ]
         ],
-        "events": []
+        "events": [],
+        "dialogueStyle": "adapted"
       },
       {
         "kind": "suppress",
@@ -1403,18 +1507,15 @@ export const episodes=[
         "foes": [],
         "dialogue": [
           [
-            "SIMMONS",
-            "Black armor, incoming!"
-          ],
-          [
-            "GRIF",
-            "The freelancer has found the problem. We are the problem."
+            "NARRATOR",
+            "Tex crosses to Red Base to retrieve the Blue flag. The Reds are unprepared for the attack."
           ]
         ],
         "targets": [
           "GRIF",
           "SIMMONS"
-        ]
+        ],
+        "dialogueStyle": "adapted"
       },
       {
         "kind": "scene",
@@ -1458,15 +1559,15 @@ export const episodes=[
         "dialogue": [
           [
             "DONUT",
-            "Something is attached to my helmet!"
+            "There is a grenade stuck to my head!"
           ],
           [
             "SIMMONS",
-            "Get clear!"
+            "Get away from him!"
           ],
           [
-            "GRIF",
-            "I hate the supply situation here."
+            "NARRATOR",
+            "The grenade injures Donut. Tex also puts Grif and Simmons out of the fight."
           ]
         ],
         "events": [
@@ -1478,9 +1579,11 @@ export const episodes=[
             4,
             "redsKnockedOut"
           ]
-        ]
+        ],
+        "dialogueStyle": "adapted"
       }
-    ]
+    ],
+    "dialogueStyle": "adapted"
   },
   {
     "id": 12,
@@ -1519,10 +1622,11 @@ export const episodes=[
         "player": "TEX",
         "dialogue": [
           [
-            "TEX",
-            "I am taking our flag back. The Reds can keep the repair bill."
+            "NARRATOR",
+            "Tex retrieves the Blue flag inside Red Base. Sarge and Lopez are waiting."
           ]
-        ]
+        ],
+        "dialogueStyle": "adapted"
       },
       {
         "kind": "scene",
@@ -1560,15 +1664,15 @@ export const episodes=[
         "dialogue": [
           [
             "SARGE",
-            "Freelancer, welcome to red hospitality."
+            "Lopez, we have the freelancer. Keep the prisoner here."
           ],
           [
             "TEX",
-            "You call this a trap?"
+            "You caught me while I was retrieving the flag."
           ],
           [
             "SARGE",
-            "I call it the one plan today that worked."
+            "And now you are staying at Red Base."
           ]
         ],
         "events": [
@@ -1577,7 +1681,8 @@ export const episodes=[
             "texCaptured"
           ]
         ],
-        "player": "SARGE"
+        "player": "SARGE",
+        "dialogueStyle": "adapted"
       },
       {
         "kind": "scene",
@@ -1609,15 +1714,15 @@ export const episodes=[
         "dialogue": [
           [
             "SIMMONS",
-            "Command is taking Donut out for treatment."
-          ],
-          [
-            "GRIF",
-            "That is one way to leave the canyon."
+            "Donut needs medical treatment at headquarters."
           ],
           [
             "SARGE",
-            "Nobody else is volunteering for the same method!"
+            "Prepare him for the airlift."
+          ],
+          [
+            "GRIF",
+            "Command is taking the rookie out of the canyon."
           ]
         ],
         "events": [
@@ -1625,7 +1730,8 @@ export const episodes=[
             3,
             "evacuateDonut"
           ]
-        ]
+        ],
+        "dialogueStyle": "adapted"
       },
       {
         "kind": "scene",
@@ -1651,20 +1757,22 @@ export const episodes=[
         "dialogue": [
           [
             "CHURCH",
-            "That freelancer is Tex. I know her."
+            "Tex is my former girlfriend."
           ],
           [
             "TUCKER",
-            "You could have opened with that before she dismantled red team."
+            "That is a fairly important detail to leave out."
           ],
           [
             "CHURCH",
-            "I was busy being a dead person."
+            "It does not change the fact that the Reds have captured her."
           ]
         ],
-        "events": []
+        "events": [],
+        "dialogueStyle": "adapted"
       }
-    ]
+    ],
+    "dialogueStyle": "adapted"
   },
   {
     "id": 13,
@@ -1720,22 +1828,23 @@ export const episodes=[
         "dialogue": [
           [
             "CHURCH",
-            "Tex was my girlfriend. Her armor also has an AI making her worse."
+            "Tex has an aggressive AI in her armor. I need to get her out of Red Base."
           ],
           [
             "TUCKER",
-            "Those are two very different problems."
+            "So what is the rescue plan?"
           ],
           [
             "CHURCH",
-            "They have become one extremely difficult problem."
+            "You and Caboose create a distraction. I can get inside without using the door."
           ],
           [
             "CABOOSE",
-            "We can rescue the girlfriend and then ask the armor to be nicer."
+            "We can pretend to attack them."
           ]
         ],
-        "events": []
+        "events": [],
+        "dialogueStyle": "adapted"
       },
       {
         "kind": "scene",
@@ -1767,20 +1876,22 @@ export const episodes=[
         "dialogue": [
           [
             "SIMMONS",
-            "Do not take your eyes off the prisoner."
+            "Our assignment is to guard the prisoner."
           ],
           [
             "GRIF",
-            "Is that a full-time position?"
+            "Then guard her. I am standing right here."
           ],
           [
             "TEX",
-            "You will find out when you blink."
+            "You two have been talking instead of paying attention."
           ]
         ],
-        "events": []
+        "events": [],
+        "dialogueStyle": "adapted"
       }
-    ]
+    ],
+    "dialogueStyle": "adapted"
   },
   {
     "id": 14,
@@ -1836,15 +1947,15 @@ export const episodes=[
         "dialogue": [
           [
             "CHURCH",
-            "The teleporter will make your armor black. Make the Reds think there are more freelancers."
-          ],
-          [
-            "CABOOSE",
-            "I will be a very convincing scary person."
+            "Go through the teleporter. It will darken your armor, and the Reds may mistake you for more freelancers."
           ],
           [
             "TUCKER",
-            "Try being a convincing person first."
+            "We distract them while you rescue Tex."
+          ],
+          [
+            "CABOOSE",
+            "This time I will help Church properly."
           ]
         ],
         "events": [
@@ -1852,7 +1963,8 @@ export const episodes=[
             2,
             "blackDisguise"
           ]
-        ]
+        ],
+        "dialogueStyle": "adapted"
       },
       {
         "kind": "possess",
@@ -1861,9 +1973,10 @@ export const episodes=[
         "dialogue": [
           [
             "CHURCH",
-            "I can borrow Sarge long enough to get Tex out."
+            "If I enter Sarge, I can use his body to give the order to release Tex."
           ]
-        ]
+        ],
+        "dialogueStyle": "adapted"
       },
       {
         "kind": "scene",
@@ -1901,19 +2014,19 @@ export const episodes=[
         "dialogue": [
           [
             "CHURCH",
-            "Simmons, release the prisoner. This is definitely your sergeant talking."
+            "Simmons, let the prisoner go. That is an order."
           ],
           [
             "SIMMONS",
-            "That is an unusually reasonable order, sir."
+            "If you say so, sir."
           ],
           [
             "CABOOSE",
-            "I can fix the shooting mistake this time!"
+            "Sarge is right there. I can shoot him to make up for shooting Church."
           ],
           [
             "TUCKER",
-            "Caboose, wait!"
+            "Caboose, Church is inside him!"
           ]
         ],
         "events": [
@@ -1925,14 +2038,16 @@ export const episodes=[
             6,
             "sargeShot"
           ]
-        ]
+        ],
+        "dialogueStyle": "adapted"
       }
-    ]
+    ],
+    "dialogueStyle": "adapted"
   },
   {
     "id": 15,
     "title": "THE WRONG KIND OF FIRST AID",
-    "player": "GRIF",
+    "player": "CHURCH",
     "roster": [
       "SARGE",
       "GRIF",
@@ -1976,18 +2091,19 @@ export const episodes=[
         "dialogue": [
           [
             "SARGE",
-            "Is this where I finally get competent subordinates?"
+            "Where are we? Why is a Blue here?"
           ],
           [
             "CHURCH",
-            "No. I have been dead for a while and mine are still terrible."
+            "Apparently we are both dead. Your team is still down there."
           ],
           [
             "SARGE",
-            "Then the afterlife needs a recruiting department."
+            "I can hear Grif. That does not make this feel like a reward."
           ]
         ],
-        "events": []
+        "events": [],
+        "dialogueStyle": "adapted"
       },
       {
         "kind": "revive",
@@ -2000,10 +2116,12 @@ export const episodes=[
         },
         "dialogue": [
           [
-            "GRIF",
-            "Nobody else is doing anything, so apparently I am doing something."
+            "NARRATOR",
+            "Grif attempts CPR while the others try to revive Sarge."
           ]
-        ]
+        ],
+        "player": "GRIF",
+        "dialogueStyle": "adapted"
       },
       {
         "kind": "scene",
@@ -2035,20 +2153,22 @@ export const episodes=[
         "dialogue": [
           [
             "SIMMONS",
-            "Grif saved you, sir."
+            "Grif brought you back, sir. He used CPR."
           ],
           [
             "SARGE",
-            "With CPR? I was shot in the head!"
+            "CPR? After I was shot in the head?"
           ],
           [
             "GRIF",
-            "Fine. Next time I will follow the complaint procedure."
+            "You are breathing again, are you not?"
           ]
         ],
-        "events": []
+        "events": [],
+        "dialogueStyle": "adapted"
       }
-    ]
+    ],
+    "dialogueStyle": "adapted"
   },
   {
     "id": 16,
@@ -2110,18 +2230,19 @@ export const episodes=[
         "dialogue": [
           [
             "DONUT",
-            "Command patched me up and gave me replacement armor."
+            "I am back from headquarters. They gave me replacement armor."
           ],
           [
             "GRIF",
-            "They ran out of red?"
+            "Your armor is pink."
           ],
           [
             "DONUT",
-            "I also brought Lopez’s speech unit. He will finally get a say in things."
+            "It is a light shade of red. I also brought the speech unit for Lopez."
           ]
         ],
-        "events": []
+        "events": [],
+        "dialogueStyle": "adapted"
       },
       {
         "kind": "collect",
@@ -2132,7 +2253,14 @@ export const episodes=[
             "x": 856,
             "y": 540
           }
-        ]
+        ],
+        "dialogue": [
+          [
+            "NARRATOR",
+            "Donut brought a speech unit so Lopez can finally talk."
+          ]
+        ],
+        "dialogueStyle": "adapted"
       },
       {
         "kind": "scene",
@@ -2170,19 +2298,19 @@ export const episodes=[
         "dialogue": [
           [
             "SIMMONS",
-            "Sir, ground yourself before touching the card."
+            "Ground yourself before installing that card, sir. Static can damage it."
           ],
           [
             "SARGE",
-            "I have installed more equipment than—"
+            "I know how to install a speech unit."
           ],
           [
             "LOPEZ",
-            "Solo puedo hablar español."
+            "La tarjeta está dañada. Solo puedo hablar español."
           ],
           [
             "GRIF",
-            "He has been waiting months to talk and we still cannot understand him."
+            "None of us can understand him."
           ]
         ],
         "events": [
@@ -2190,9 +2318,11 @@ export const episodes=[
             2,
             "voiceCardSpark"
           ]
-        ]
+        ],
+        "dialogueStyle": "adapted"
       }
-    ]
+    ],
+    "dialogueStyle": "adapted"
   },
   {
     "id": 17,
@@ -2231,13 +2361,14 @@ export const episodes=[
         "dialogue": [
           [
             "TUCKER",
-            "You owe us for the rescue. The tank needs repair."
+            "We rescued you. The least you can do is help fix our tank."
           ],
           [
             "TEX",
-            "Then keep Caboose away from the controls."
+            "I will repair Sheila. Keep the rookie away from the controls."
           ]
-        ]
+        ],
+        "dialogueStyle": "adapted"
       },
       {
         "kind": "scene",
@@ -2263,18 +2394,19 @@ export const episodes=[
         "dialogue": [
           [
             "CHURCH",
-            "My body is still lying here."
+            "My body is still on the ridge. Nobody buried it?"
           ],
           [
             "TUCKER",
-            "We had a lot going on."
+            "We had the freelancer and the tank to worry about."
           ],
           [
             "CHURCH",
-            "I noticed. Almost all of it involved ignoring my body."
+            "That does not explain leaving my body out here."
           ]
         ],
-        "events": []
+        "events": [],
+        "dialogueStyle": "adapted"
       },
       {
         "kind": "scene",
@@ -2306,20 +2438,22 @@ export const episodes=[
         "dialogue": [
           [
             "LOPEZ",
-            "Necesito reparaciones y nadie me entiende."
+            "Estoy intentando explicar lo que pasó."
           ],
           [
             "SARGE",
-            "Outstanding attitude, Lopez!"
+            "Lopez, speak so the rest of us can understand."
           ],
           [
             "SIMMONS",
-            "Sir, I am not certain that was an enthusiastic response."
+            "The damaged card is the problem, sir."
           ]
         ],
-        "events": []
+        "events": [],
+        "dialogueStyle": "adapted"
       }
-    ]
+    ],
+    "dialogueStyle": "adapted"
   },
   {
     "id": 18,
@@ -2375,18 +2509,19 @@ export const episodes=[
         "dialogue": [
           [
             "CHURCH",
-            "Tex is going after the Reds. If she leaves, I lose my chance to remove that AI."
+            "If Tex destroys the Reds, she will leave. I need her to stay long enough to remove the AI."
           ],
           [
             "TUCKER",
-            "So you are saving the Reds to keep Tex here?"
+            "You are going to warn the enemy about our own freelancer?"
           ],
           [
             "CHURCH",
-            "I did not say it was a nice plan."
+            "That is the only way to keep her here."
           ]
         ],
-        "events": []
+        "events": [],
+        "dialogueStyle": "adapted"
       },
       {
         "kind": "follow",
@@ -2410,7 +2545,13 @@ export const episodes=[
             "y": 540
           }
         ],
-        "dialogue": []
+        "dialogue": [
+          [
+            "NARRATOR",
+            "Church crosses toward Red Base to warn the Reds before Tex attacks."
+          ]
+        ],
+        "dialogueStyle": "adapted"
       },
       {
         "kind": "scene",
@@ -2442,24 +2583,22 @@ export const episodes=[
         "dialogue": [
           [
             "CABOOSE",
-            "The Reds have a pink person! Church went to help them so you would stay."
+            "The Reds have someone in pink armor. Church went over there to warn them."
           ],
           [
             "TEX",
-            "Church is warning them?"
-          ],
-          [
-            "CABOOSE",
-            "I was not supposed to say the helpful secret."
+            "Church is warning the Reds about me?"
           ],
           [
             "TUCKER",
-            "Then stop contributing to the briefing."
+            "Caboose, you were not meant to tell her that."
           ]
         ],
-        "events": []
+        "events": [],
+        "dialogueStyle": "adapted"
       }
-    ]
+    ],
+    "dialogueStyle": "adapted"
   },
   {
     "id": 19,
@@ -2521,15 +2660,15 @@ export const episodes=[
         "dialogue": [
           [
             "LOPEZ",
-            "Tex viene con el tanque. Están en peligro."
+            "Tex viene con el tanque. Va a atacar la base."
           ],
           [
             "SARGE",
-            "Lopez, this is no time for maintenance requests!"
+            "Lopez, I cannot understand what you are saying."
           ],
           [
-            "SIMMONS",
-            "I think he is pointing at the tank."
+            "NARRATOR",
+            "Church has entered Lopez, but the robot can still only speak Spanish. The warning fails."
           ]
         ],
         "events": [
@@ -2537,7 +2676,8 @@ export const episodes=[
             1,
             "possessLopez"
           ]
-        ]
+        ],
+        "dialogueStyle": "adapted"
       },
       {
         "kind": "survive",
@@ -2553,10 +2693,11 @@ export const episodes=[
         "tankFire": true,
         "dialogue": [
           [
-            "GRIF",
-            "The warning might have been a warning."
+            "NARRATOR",
+            "Tex and Sheila begin their attack on Red Base."
           ]
-        ]
+        ],
+        "dialogueStyle": "adapted"
       },
       {
         "kind": "storyGrenade",
@@ -2568,13 +2709,14 @@ export const episodes=[
         "dialogue": [
           [
             "DONUT",
-            "That freelancer put a grenade on my helmet. I have been practicing the return."
+            "Tex put a grenade on my head. This one is going back across the canyon."
           ]
         ],
         "target": {
           "x": 2228,
           "y": 490
-        }
+        },
+        "dialogueStyle": "adapted"
       },
       {
         "kind": "scene",
@@ -2605,20 +2747,16 @@ export const episodes=[
         ],
         "dialogue": [
           [
+            "NARRATOR",
+            "Donut’s grenade disables Sheila. Church reaches the dying Tex while still inside Lopez."
+          ],
+          [
             "TEX",
-            "Church… the AI is gone."
+            "Church, the AI is gone. Thank you."
           ],
           [
-            "CHURCH",
-            "I wanted to get you out too."
-          ],
-          [
-            "CABOOSE",
-            "Is my friend going to be okay?"
-          ],
-          [
-            "CHURCH",
-            "Not everything gets fixed by saying that it will."
+            "LOPEZ",
+            "Tex, no te vayas."
           ]
         ],
         "events": [
@@ -2626,7 +2764,8 @@ export const episodes=[
             2,
             "texDies"
           ]
-        ]
+        ],
+        "dialogueStyle": "adapted"
       },
       {
         "kind": "scene",
@@ -2651,16 +2790,12 @@ export const episodes=[
         ],
         "dialogue": [
           [
-            "CABOOSE",
-            "I will look after my friends now."
-          ],
-          [
-            "CHURCH",
-            "You can start by putting the weapon down."
-          ],
-          [
             "NARRATOR",
-            "Tex’s AI escaped before she died. Nobody here understands where it went yet."
+            "Nearby, Caboose answers in an unfamiliar, menacing voice."
+          ],
+          [
+            "CABOOSE",
+            "My name is O’Malley."
           ]
         ],
         "events": [
@@ -2668,8 +2803,10 @@ export const episodes=[
             1,
             "aiEscape"
           ]
-        ]
+        ],
+        "dialogueStyle": "adapted"
       }
-    ]
+    ],
+    "dialogueStyle": "adapted"
   }
 ];

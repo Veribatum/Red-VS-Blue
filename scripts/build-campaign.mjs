@@ -1,4 +1,4 @@
-import {missions,cast} from './previous-campaign.mjs';import {writeFile} from 'node:fs/promises';
+import {missions,cast} from './previous-campaign.mjs';import {correctSeasonOne} from './season1-corrections.mjs';import {writeFile} from 'node:fs/promises';
 const x=(p)=>Math.round(1500-p[1]*26+p[0]*4),at=(p)=>({x:x(p),y:540});
 const players=['SIMMONS','GRIF','DONUT','DONUT','DONUT','GRIF','CABOOSE','GRIF','SARGE','TUCKER','TEX','SARGE','CHURCH','CHURCH','GRIF','DONUT','TEX','CHURCH','DONUT'];
 const episodes=missions.map((m,i)=>({id:i+1,title:m.title,player:players[i],roster:m.roster,ghost:m.churchGhost,dead:m.churchDead,tank:i>=6,captured:m.texCaptured,body:m.bodyOnRidge,pink:i>=15,spawn:at(m.spawn),report:m.report,stages:m.stages.map(st=>{let s={...st};if(st.point)s.point=at(st.point);if(st.start)s.start=at(st.start);if(st.path)s.path=st.path.map(at);if(st.points)s.points=st.points.map(at);if(st.cast)s.cast=st.cast.map((c,n,arr)=>({id:c.who,...at(c.at),x:x(st.point)+(n-(arr.length-1)/2)*100,pose:c.pose}));if(st.items)s.items=st.items.map(([type,color,px,pz])=>({type,...at([px,pz])}));return s})}));
@@ -15,6 +15,7 @@ episodes[17].stages.push(extra('Watch Caboose accidentally reveal Church’s pla
 episodes[18].stages.push(extra('See the AI’s escape set up the next season',[0,-21],[['CABOOSE',[5,-26]],['LOPEZ',[-2,-23]]],[['CABOOSE','I will look after my friends now.'],['CHURCH','You can start by putting the weapon down.'],['NARRATOR','Tex’s AI escaped before she died. Nobody here understands where it went yet.']],[[1,'aiEscape']]));
 // The final throw has an actual launch area and ballistic target rather than an automatic win.
 const throwStage=episodes[18].stages.find(s=>s.kind==='storyGrenade');throwStage.point={x:1450,y:540};throwStage.target={x:2228,y:490};throwStage.title='As Donut, throw a grenade from the ridge to Sheila';
+correctSeasonOne(episodes);
 const characters=Object.fromEntries(Object.entries(cast).map(([id,c])=>[id,{id,color:'#'+c.color.toString(16).padStart(6,'0'),...(c.pos?at(c.pos):{})}]));characters.NARRATOR={id:'NARRATOR',color:'#efc89c'};
 await writeFile(new URL('../src/campaign.js',import.meta.url),'// Original fan dialogue. Story order: original 2003 Season 1. See docs/STORY-COVERAGE.md.\nexport const characters='+JSON.stringify(characters,null,2)+';\nexport const episodes='+JSON.stringify(episodes,null,2)+';\n');
 console.log(episodes.length+' chapters / '+episodes.reduce((n,e)=>n+e.stages.length,0)+' objectives');

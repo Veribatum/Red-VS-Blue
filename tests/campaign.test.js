@@ -49,3 +49,14 @@ test('Jumping, cover platforms, reload and missed throws remain playable',()=>{
 });
 test('Swept collision catches fast projectiles',()=>{assert(segmentHits({px:0,py:10,x:1000,y:10},450,0,10,20));assert(!segmentHits({px:0,py:30,x:1000,y:30},450,0,10,20));});
 test('Asset references exist, sprite sheets have all 12 animation frames',()=>{for(const name of ['sarge','grif','simmons','donut','donut_pink','church','tucker','caboose','lopez','tex']){const path=new URL('../assets/'+name+'.svg',import.meta.url);assert(existsSync(path));const svg=readFileSync(path,'utf8');assert(svg.includes('width="1152"'));assert.equal((svg.match(/transform="translate\(/g)||[]).filter(()=>true).length,72);}});
+
+test('Opening story follows the conversation subjects and corrected introductions',()=>{
+ assert(episodes[0].stages[0].dialogue.some(([who,line])=>who==='GRIF'&&line.includes('God')));
+ assert(episodes[0].stages[1].dialogue.some(([,line])=>line.includes('sniper scope')));
+ assert(episodes[1].roster.includes('LOPEZ'));
+ assert(episodes[2].stages[0].dialogue.some(([,line])=>line.includes('headlight fluid')));
+ assert(episodes[3].stages[0].dialogue.some(([,line])=>line.includes('guard our flag')));
+ assert(episodes[3].stages[2].dialogue.some(([,line])=>line.includes('General')));
+ assert.equal(episodes[9].stages[0].dialogue[0][0],'TUCKER');
+ assert(episodes[18].stages.at(-1).dialogue.some(([who,line])=>who==='CABOOSE'&&line.includes('O’Malley')));
+});
