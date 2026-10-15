@@ -1,0 +1,11 @@
+{
+  "id": "./",
+  "name": "Red vs Blue — 2D Canyon Chronicles",
+  "short_name": "RVB 2D",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#152b39",
+  "theme_color": "#152b39",
+  "icons": [{"src": "assets/app-icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any"}]
+}

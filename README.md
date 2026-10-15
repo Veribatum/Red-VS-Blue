@@ -44,9 +44,11 @@ Grenades replenish after a short cooldown. You can retry an objective after dyin
 
 ## GitHub Pages
 
-The repository includes a Pages deployment workflow. In **Settings → Pages → Build and deployment**, set **Source: GitHub Actions**, then run the **Deploy game** workflow. The workflow tests the game and uploads only `index.html`, `style.css`, `src/` and `assets/`.
+Live game: **https://veribatum.github.io/Red-VS-Blue/**
 
-The code does not assume Pages is already enabled. CI runs independently on pushes and pull requests.
+Pages is configured to **Deploy from a branch → main → / (root)**. Commits to main automatically update the game. Keep this setting; the optional Actions deployment workflow is not required for branch publishing.
+
+For iPhone, open that address in Safari and use **Share → Add to Home Screen**. The launcher is named **RVB 2D**. The previous `canyon-idiots.palerain16.chatgpt.site` address is the separate old 3D prototype; an existing shortcut to that address will continue to open 3D. The new shortcut opens the 2D game in standalone mode. Network access is required; no offline cache is installed.
 
 ## Development
 
